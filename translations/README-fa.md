@@ -29,20 +29,20 @@
 * [Polish](translations/README-pl.md)
 * [Русский](translations/README-ru.md)
 * [Tiếng Việt](translations/README-vn.md)
-* [Persian](translations/README-fa.md)
+* [فارسی](translations/README-fa.md)
 
 ## عبارت باقاعده چیست؟
 
 > عبارت باقاعده گروهی از کاراکترها  یا نشانه ها  ست که برای پیدا کردن الگوی خاصی در یک متن استفاده می شود.
 
-یک عبارت منظم الگویی است که با رشته ای از چپ به راست مطابقت دارد. عبارت باقاعده  رامی توان برای جایگزینی یک متن درون یک رشته یا برای اعتبارسنجی  فرم ها ونیز برای استخراج یک زیر رشته از یک رشته  ی دیگر  براساس یک الگو و در موارد بیشمار دیگری استفاده کرد.بجای استفاده از کلمه ی "Regular experssion"  معمولا از شکل اختصاری آن به صورت "regex" یا "regexp" استفاده می شود.
+یک عبارت منظم الگویی است که با رشته‌ای از چپ به راست مطابقت دارد. عبارت باقاعده  رامی‌توان برای جایگزینی یک متن درون یک رشته یا برای اعتبارسنجی  فرم‌ها ونیز برای استخراج یک زیر رشته از یک رشته‌ی دیگر  براساس یک الگو و در موارد بی شمار دیگری استفاده کرد. بجای استفاده از کلمه‌ی "Regular experssion"  معمولا از شکل اختصاری آن به صورت "regex" یا "regexp" استفاده می‌شود.
 
-فرض کنید برنامه ای نوشته اید و می خواهید قواعدی را برای انتخاب نام کاربری توسط کاربر ایجاد کنید. ما می خواهیم اجازه دهیم که نام کاربری شامل حروف، اعداد، زیر خط و خط ربط باشد. همچنین  می خواهیم تعداد کاراکترهای نام کاربری محدود باشد.
-برای ارزیابی نام کاربری از عبارت باقاعده ی زیر استفاده می کنیم:
+فرض کنید برنامه‌ای نوشته‌اید و می‌خواهید قواعدی را برای انتخاب نام کاربری توسط کاربر ایجاد کنید. ما می خواهیم اجازه دهیم که نام کاربری شامل حروف، اعداد، زیر خط و خط ربط باشد. همچنین  می‌خواهیم تعداد کاراکترهای نام کاربری محدود باشد.
+برای ارزیابی نام کاربری از عبارت باقاعده ی زیر استفاده می‌کنیم:
 
 <br/><br/>
 <p align="center">
-  <img src="./img/regexp-fa.png" alt="Regular expression">
+  <img src="../img/regexp-fa.png" alt="Regular expression">
 </p>
 
 عبارت باقاعده ی بالا می تواند رشته هایی مانند `john-doe` ، `jo-hn_doe` و `john12_as` را بپذیرد. این عبارت باقاعده نمی تواند `Jo` را بپذیرد چون علاوه برآنکه دارای حروف بزرگ است، طول کمی نیز دارد.
@@ -80,7 +80,7 @@
 <a name="1"></a>
 ## 1. تطبیق گرهای ابتدایی
 
-عبارت باقاعده الگویی از کاراکتر ها برای انجام عمل جست و جو در متن است. برای مثال معنای عبارت باقاعده ی `the` به این صورت است که: ابتدا حرف `t` به دنبال آن حرف `h` و در نهایت حرف `e` انتخاب می شوند.
+عبارت باقاعده الگویی از کاراکترها برای انجام عمل جست‌وجو در متن است. برای مثال معنای عبارت باقاعده ی `the` به این صورت است که: ابتدا حرف `t` به دنبال آن حرف `h` و در نهایت حرف `e` انتخاب می شوند.
 
 <pre>
 "the" => The fat cat sat on <a href="#learn-regex"><strong>the</strong></a> mat.
@@ -88,7 +88,7 @@
 
 [امتحان کنید](https://regex101.com/r/dmRygT/1)
 
-عبارت باقادعده ی `123` با رشته س `123` مطابقت می کند. عبارت باقاعده به این صورت عمل می کند که هر کاراکتری در عبارت باقاعده با هر کاراکتر از رشته ورودی مطابقت داده می شود. عبارات باقاعده درحالت عادی به بزرگی و کوچکی حروف حساس هستند بنابراین عبارت باقاعده ی `The` رشته ی ‍`the` را پوشش نمی دهد.
+عبارت باقاعده‌ی `123` با رشته‌ی `123` مطابقت می‌کند. عبارت باقاعده به این صورت عمل می کند که هر کاراکتری در عبارت باقاعده با هر کاراکتر از رشته ورودی مطابقت داده می شود. عبارات باقاعده درحالت عادی به بزرگی و کوچکی حروف حساس هستند بنابراین عبارت باقاعده ی `The` رشته‌ی ‍`the` را پوشش نمی‌دهد.
 
 <pre>
 "The" => <a href="#learn-regex"><strong>The</strong></a> fat cat sat on the mat.
@@ -99,138 +99,108 @@
 
 ## 2. فرا کاراکترها
 
-فرا کاراکتر ها بلاک هایی از عبارات باقاعده هستند. فرا کاراکترها به جای مفهوم پیش فرض خود، به صورت خاصی تفسیر می شوند. برخی از فرا کاراکترها معنای خاصی دارند و در درون براکت ها نوشته می شوند. فرا کاراکتر های به صورت ذیل اند:
+فرا کاراکترها بلاک‌هایی از عبارات باقاعده هستند. فرا کاراکترها به جای مفهوم پیش‌فرض خود، به صورت خاصی تفسیر می‌شوند. برخی از فرا کاراکترها معنای خاصی دارند و در درون براکت‌ها نوشته می‌شوند. فرا کاراکترهای به صورت ذیل‌اند:
 
-|Meta character|Description|
+|فراکاراکتر|شرح|
 |:----:|----|
-|.|Period matches any single character except a line break.|
-|[ ]|Character class. Matches any character contained between the square brackets.|
-|[^ ]|Negated character class. Matches any character that is not contained between the square brackets|
-|*|Matches 0 or more repetitions of the preceding symbol.|
-|+|Matches 1 or more repetitions of the preceding symbol.|
+|.|نقطه هر کاراکتر تنها به جز کاراکتر line break را مچ می‌کند.|
+|[ ]|کاراکتر کلاس. هر کاراکتر درون براکت‌ها مچ می‌شود.|
+|[^ ]|کاراکتر کلاس معکوس. هر کاراکتری که درون براکت‌ها نباشد، مچ می‌شود.|
+|*|صفر یا هر چند تکرار از سمبل قبلی را مچ می‌کند.|
+|+|یک یا چند تکرار از سمبل قبلی را مچ می‌کند.|
 |?|Makes the preceding symbol optional.|
-|{n,m}|Braces. Matches at least "n" but not more than "m" repetitions of the preceding symbol.|
-|(xyz)|Character group. Matches the characters xyz in that exact order.|
+|{n,m}|به تعداد n تا m کاراکتر را مچ می‌کند.|
+|(xyz)|گروه کاراکترها. کاراکترهای xyz را به همین ترتیب مچ می‌کند.|
 |&#124;|Alternation. Matches either the characters before or the characters after the symbol.|
-|&#92;|Escapes the next character. This allows you to match reserved characters <code>[ ] ( ) { } . * + ? ^ $ \ &#124;</code>|
-|^|Matches the beginning of the input.|
-|$|Matches the end of the input.|
+|&#92;|کاراکتر بعدی را اسکیپ می‌کند. مچ شدن کاراکترهای رزروی مانند را امکان پذیر می‌کند. <code>[ ] ( ) { } . * + ? ^ $ \ &#124;</code>| 
+|^| شروع ورودی را مچ می‌کند.|
+|$|پایان ورودی را مچ می‌کند.|
 
-## 2.1 Full stop
-
-Full stop `.` is the simplest example of meta character. The meta character `.`
-matches any single character. It will not match return or newline characters.
-For example, the regular expression `.ar` means: any character, followed by the
-letter `a`, followed by the letter `r`.
+## 2.1 فول استاپ
+فول استاپ `.` ساده‌ترین مثال از فراکاراکتر‌هاست. این فراکاراکتر هر کاراکتر تنها به استثنای کاراکتر‌های سرخط و خط بعدی را مچ می‌کند. برای مثال عبارت باقاعده‌ی `.ar` به معنای مچ شدن هر کاراکتری به دنبال آن حرف `a` و سپس حرف `r` است.
 
 <pre>
 ".ar" => The <a href="#learn-regex"><strong>car</strong></a> <a href="#learn-regex"><strong>par</strong></a>ked in the <a href="#learn-regex"><strong>gar</strong></a>age.
 </pre>
 
-[Test the regular expression](https://regex101.com/r/xc9GkU/1)
+[امتحان کنید](https://regex101.com/r/xc9GkU/1)
 
-## 2.2 Character set
+## 2.2 مجموعه کاراکترها
 
-Character sets are also called character class. Square brackets are used to
-specify character sets. Use a hyphen inside a character set to specify the
-characters' range. The order of the character range inside square brackets
-doesn't matter. For example, the regular expression `[Tt]he` means: an uppercase
-`T` or lowercase `t`, followed by the letter `h`, followed by the letter `e`.
+مجموعه کاراکتر‌ها، کلاس کاراکترها نیز خوانده می‌شوند. از کروشه برای مشخص کردن مجموعه کاراکترها استفاده می‌شود. برای مشخص کردن محدوده کاراکترها از خط فاصله استفاده می‌شود. ترتیب کاراکترها در درون کروشه مهم نیست. مثلاً عبارت باقاعده `[Tt]he` به معنای مچ شدن یک `T` به دنبال آن یک `t` و در نهایت حروف `h`و `e` است.
 
 <pre>
 "[Tt]he" => <a href="#learn-regex"><strong>The</strong></a> car parked in <a href="#learn-regex"><strong>the</strong></a> garage.
 </pre>
 
-[Test the regular expression](https://regex101.com/r/2ITLQ4/1)
+[امتحان کنید](https://regex101.com/r/2ITLQ4/1)
 
-A period inside a character set, however, means a literal period. The regular
-expression `ar[.]` means: a lowercase character `a`, followed by letter `r`,
-followed by a period `.` character.
+یک نقطه درون مجموعه کاراکترها به معنای یک نقطه معمولی است. در واقع نقطه اسکیپ می‌شود. مثلاً برای عبارت باقاعده‌ی `ar[.]` مچ به صورت زیر خواهد بود.
 
 <pre>
 "ar[.]" => A garage is a good place to park a c<a href="#learn-regex"><strong>ar.</strong></a>
 </pre>
 
-[Test the regular expression](https://regex101.com/r/wL3xtE/1)
+[امتحان کنید](https://regex101.com/r/wL3xtE/1)
 
-### 2.2.1 Negated character set
+### 2.2.1 مجموعه کاراکتری قرینه
 
-In general, the caret symbol represents the start of the string, but when it is
-typed after the opening square bracket it negates the character set. For
-example, the regular expression `[^c]ar` means: any character except `c`,
-followed by the character `a`, followed by the letter `r`.
+درحالت کلی کاراکتر هت نمایانگر شروع رشته است. اما وقتی که در آغاز مجموعه کاراکترها در درون کرشه استفاده شود، عبارت باقاعده را قرینه می‌کند. برای مثال عبارت باقاعده‌ی [^c]ar به معنای مچ شدن هر کاراکتری به جز `c` و به دنبال ‌آن کاراکتر‌های `a`  , `r` است.
 
 <pre>
 "[^c]ar" => The car <a href="#learn-regex"><strong>par</strong></a>ked in the <a href="#learn-regex"><strong>gar</strong></a>age.
 </pre>
 
-[Test the regular expression](https://regex101.com/r/nNNlq3/1)
+[امتحان کنید](https://regex101.com/r/nNNlq3/1)
 
-## 2.3 Repetitions
+## 2.3 تکرارها
 
-Following meta characters `+`, `*` or `?` are used to specify how many times a
-subpattern can occur. These meta characters act differently in different
-situations.
+فراکاراکترهای `+`و `*`و `?` برای مشخص کردن تعداد دفعات مچ شدن زیر الگوها استفاده می‌شوند. این فراکاراکترها در موقعیت‌ها مختلف، معانی مختلفی دارند.
 
-### 2.3.1 The Star
 
-The symbol `*` matches zero or more repetitions of the preceding matcher. The
-regular expression `a*` means: zero or more repetitions of preceding lowercase
-character `a`. But if it appears after a character set or class then it finds
-the repetitions of the whole character set. For example, the regular expression
-`[a-z]*` means: any number of lowercase letters in a row.
+### 2.3.1 ستاره
+
+کاراکتر `*` صفر یا چند تکرار از کارکتر پیشین را مچ می‌کند. عبارت باقاعده‌ی `a*` به معنای تکرار صفر یا چند مورد کاراکتر `a` است. اما اگر به مجموعه کاراکترها اعمال شود به معنای تکرار تمام عناصر آن مجموعه کاراکتری است. مثلاً عبارت باقاعده‌ی `[a-z]*` به معنای هر تعداد حروف کوچک در یک سطر است.
 
 <pre>
 "[a-z]*" => T<a href="#learn-regex"><strong>he</strong></a> <a href="#learn-regex"><strong>car</strong></a> <a href="#learn-regex"><strong>parked</strong></a> <a href="#learn-regex"><strong>in</strong></a> <a href="#learn-regex"><strong>the</strong></a> <a href="#learn-regex"><strong>garage</strong></a> #21.
 </pre>
 
-[Test the regular expression](https://regex101.com/r/7m8me5/1)
+[امتحان کنید](https://regex101.com/r/7m8me5/1)
 
-The `*` symbol can be used with the meta character `.` to match any string of
-characters `.*`. The `*` symbol can be used with the whitespace character `\s`
-to match a string of whitespace characters. For example, the expression
-`\s*cat\s*` means: zero or more spaces, followed by lowercase character `c`,
-followed by lowercase character `a`, followed by lowercase character `t`,
-followed by zero or more spaces.
+سمبل `*` به همراه کاراکتر `.` برای مچ شدن هر رشته‌ای از کاراکترها استفاده میشود`.*`. سمبل `*` به همراه کاراکتر whitespace `\s` به منظور مچ شدن رشته‌ای از کاراکترهای whitespace استفاده می‌شود. مثلاً در عبارت باقاعده‌ی `\s*cat\s*` صفر یا چند فضای خالی مچ می‌شود به دنبال آن کاراکتر `c` و بعد کاراکتر `a` و  کاراکتر `t` و درنهایت صفر یا چند فضای خالی مچ خواهند شد.
 
 <pre>
 "\s*cat\s*" => The fat<a href="#learn-regex"><strong> cat </strong></a>sat on the con<a href="#learn-regex"><strong>cat</strong></a>enation.
 </pre>
 
-[Test the regular expression](https://regex101.com/r/gGrwuz/1)
+[امتحان کنید](https://regex101.com/r/gGrwuz/1)
 
-### 2.3.2 The Plus
+### 2.3.2 جمع
 
-The symbol `+` matches one or more repetitions of the preceding character. For
-example, the regular expression `c.+t` means: lowercase letter `c`, followed by
-at least one character, followed by the lowercase character `t`. It needs to be
-clarified that `t` is the last `t` in the sentence.
+کاراکتر `+` یک یا چند تکرار از کاراکتر‌های پیشین را مچ می‌کند. برای مثال عبارت باقاعده‌ی `c.+t` به معنای مچ شدن یک کاراکتر `c` به دنبال آن حداقل یک کاراکتر دیگر و درنهایت کاراکتر `t` خواهد بود.
 
 <pre>
 "c.+t" => The fat <a href="#learn-regex"><strong>cat sat on the mat</strong></a>.
 </pre>
 
-[Test the regular expression](https://regex101.com/r/Dzf9Aa/1)
+[امتحان کنید](https://regex101.com/r/Dzf9Aa/1)
 
-### 2.3.3 The Question Mark
+### 2.3.3 علامت سوال
 
-In regular expression the meta character `?` makes the preceding character
-optional. This symbol matches zero or one instance of the preceding character.
-For example, the regular expression `[T]?he` means: Optional the uppercase
-letter `T`, followed by the lowercase character `h`, followed by the lowercase
-character `e`.
+در عبارات باقاعده‌، فراکاراکتر `?` کاراکتر پیشین را اختیاری می‌کند بدین معنی که صفر یا یک کاراکتر را مچ می‌کند. مثلاً عبارت باقاعده‌ی `[T]?he` به معنای مچ شدن صفر یا یک کاراکتر `T` و به دنبال آن کاراکتر های `h` و ‍`e` خواهد بود.
 
 <pre>
 "[T]he" => <a href="#learn-regex"><strong>The</strong></a> car is parked in the garage.
 </pre>
 
-[Test the regular expression](https://regex101.com/r/cIg9zm/1)
+[امتخان کنید](https://regex101.com/r/cIg9zm/1)
 
 <pre>
 "[T]?he" => <a href="#learn-regex"><strong>The</strong></a> car is parked in t<a href="#learn-regex"><strong>he</strong></a> garage.
 </pre>
 
-[Test the regular expression](https://regex101.com/r/kPpO2x/1)
+[امتحان کنید](https://regex101.com/r/kPpO2x/1)
 
 ## 2.4 Braces
 
